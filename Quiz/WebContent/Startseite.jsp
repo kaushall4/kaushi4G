@@ -10,7 +10,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action="Startseite,java" method="get" accept-charset="utf-8">
+		<label>Gastname: <input type="text" name="gast"></label><br>
+	</form>
+	<form action="Startseite,java" method="get" accept-charset="utf-8">
+		<input type ="submit" name="submit" value="senden"> 
+	</form>
 <div class="container">
 	<div class ="row">
 		<div class ="col-sm">
