@@ -2,31 +2,33 @@ package Buch;
 
 import java.util.ArrayList;
 
-
-
 public class Bibliothek {
-    public String getName() {
+	private String name = "Bib1";
+	public ArrayList<Buch> buecher = new ArrayList<Buch>();
+	private static Bibliothek bibliothek = null;
+	
+	public static Bibliothek getBibliothek() {
+		if (bibliothek == null) {
+			bibliothek = new Bibliothek();
+		}
+		return bibliothek;
+	}
+
+	public ArrayList<Buch> getBuecher() {
+		return buecher;
+	}
+
+	public void setBuecher(ArrayList<Buch> buecher) {
+		this.buecher = buecher;
+	}
+
+	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public ArrayList<Buch> getList() {
-		return list;
-	}
-	public void setList(ArrayList<Buch> list) {
-		this.list = list;
-	}
-	private ArrayList<Buch> list = new ArrayList<Buch>();
-	private String name;
-	public static Bibliothek bibliothek=null;
-	
-	//singleton Pattern
-	public static Bibliothek getBibliothek()
-	{
-		if (bibliothek == null)
-			bibliothek = new Bibliothek
-	}
-
-
 }
+
+
